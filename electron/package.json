@@ -1,0 +1,15 @@
+{
+  "name": "babel-preset-php-example-electron",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.php",
+  "scripts": {
+    "start": "electron -r babel-register ."
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-preset-php": "^1.2.0",
+    "electron": "^1.7.8"
+  }
+}
