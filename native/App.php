@@ -3,30 +3,22 @@ $React = require("react");
 
 $ReactNative = require("react-native");
 $StyleSheet = $ReactNative->StyleSheet;
-$Text = $ReactNative->Text;
+$WebView = $ReactNative->WebView;
 $View = $ReactNative->View;
 $Image = $ReactNative->Image;
 
 $styles = $StyleSheet->create([
   'container' => [
-    'flex' => 1,
-    'backgroundColor' => '#fff',
-    'alignItems' => 'center',
-    'justifyContent' => 'center'
+    'width' => '100%',
+    'height' => '100%',
   ]
 ]);
 
 $App = function($props) {
-  return React->createElement($View, ['style' => styles->container], [
-    React->createElement($Image, [
-      'key' => 1,
-      'style' => [
-        'width' => 470,
-        'height' => 280,
-      ],
-      'source' => ['uri' => 'https://go.chatwork.com/ja/image/download/img_vt_normal.png']
-    ], null)
-  ]);
+  return React->createElement($WebView, [
+    'source' => ['uri' => 'http://corp.chatwork.com/ja/recruit/engineer/#job2'],
+    'style' => styles->container,
+  ], null);
 };
 
 $module->exports = $App;

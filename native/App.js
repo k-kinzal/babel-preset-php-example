@@ -3,31 +3,23 @@ var React = require("react");
 var ReactNative = require("react-native");
 
 var StyleSheet = ReactNative.StyleSheet;
-var Text = ReactNative.Text;
+var WebView = ReactNative.WebView;
 var View = ReactNative.View;
 var Image = ReactNative.Image;
 var styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    width: "100%",
+    height: "100%"
   }
 });
 
 var App = props => {
-  return React.createElement(View, {
-    style: styles.container
-  }, [React.createElement(Image, {
-    key: 1,
-    style: {
-      width: 470,
-      height: 280
-    },
+  return React.createElement(WebView, {
     source: {
-      uri: "https://go.chatwork.com/ja/image/download/img_vt_normal.png"
-    }
-  }, undefined)]);
+      uri: "http://corp.chatwork.com/ja/recruit/engineer/#job2"
+    },
+    style: styles.container
+  }, undefined);
 };
 
 module.exports = App;
